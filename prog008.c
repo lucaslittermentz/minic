@@ -16,7 +16,7 @@ int main()
             pos=i;
         }
     }
-    printf("\nMax: %d \nMin: %d\n",max,min);
+    printf("\nMin: %d \nPos: %d\n",max,pos);
 
     return 0;
 }
