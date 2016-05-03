@@ -3,20 +3,18 @@
 
 int main()
 {
-    int n, min, pos, i;
-    scanf("%d",&n);
-    int a[n];
-    for (i=0;i<n;i++) {
+    int a[20],i,j;
+    for (i=0;i<20;i++) {
         scanf("%d",&a[i]);
     }
-    min = a[0];
-    for (i=0;i<n;i++) {
-        if (a[i]<=min) {
-            min=a[i];
-            pos=i+1;
-        } else {}
+    for (i=0;i<20/2;i++) {
+        j = a[i];
+        a[i] = a[19-i];
+        a[19-i] = j;
     }
-    printf("\nMin: %d \nPos: %d\n",min,pos);
+    for (i=0;i<20;i++) {
+        printf("N[%d] = %d\n",i,a[i]);
+    }
 
     return 0;
 }
