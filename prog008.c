@@ -3,20 +3,15 @@
 
 int main()
 {
-    int n, pos, min, i;
+    int n, i;
     scanf("%d",&n);
-    int a[n];
+    int* x=(int*)malloc(sizeof(int*)*n);
+    int* y=(int*)malloc(sizeof(int*)*n);
     for (i=0;i<n;i++) {
-        scanf("%d",&a[i]);
+        x[i]=rand()%200;
+        y[i]=rand()%200;
+        printf("X[%2d] = %3d    Y[%2d] = %3d\n",i,x[i],i,y[i]);
     }
-    min = a[0];
-    for (i=0;i<n;i++) {
-        if (a[i]<=min) {
-            min=a[i];
-            pos=i;
-        }
-    }
-    printf("\nMin: %d \nPos: %d\n",max,pos);
 
     return 0;
 }
